@@ -31,11 +31,6 @@
                     <label for="email">Email</label>
                 </div>
 
-                <div class="inputbox">
-                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                    <label for="endereco">Endereço</label>
-                </div>
-
                 <div>
                     <p>Sexo:</p>
                     <input type="radio" id="feminino" name="genero" value="feminino" required>
@@ -51,12 +46,44 @@
                     <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
                 </div>
 
-                <!--<button type="submit" id="submit">Enviar</button>-->
+                <div class="inputbox">
+                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                    <label for="endereco">Endereço</label>
+                </div>
+                
+                <div class="inputbox">
+                <input type="text" name="numero" id="numero" class="inputUser" inputmode="numeric" required>
+                <label for="numero">Número</label>
+                </div>
+
+                <div class="inputbox">
+                    <input type="text" name="bairro" id="bairro" class="inputUser" required>
+                    <label for="bairro">Bairro</label>
+                </div
+
+                <div class="inputbox">
+                    <input type="text" name="cep" id="cep" class="inputUser" 
+                    oninput="mascaraCEP(this)" maxlength="9" inputmode="numeric" 
+                    placeholder="00000-000" required>
+                    <label for="cep">CEP</label>
+                </div>
+
+                <div class="inputbox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="cidade">Cidade</label>
+                </div>
+                
+                <div class="inputbox">
+                    <input type="text" name="Estado" id="Estado" class="inputUser" required>
+                    <label for="Estado">Estado</label>
+                </div>
+
+
             </fieldset>
         </form>
     </div>
 
-    <!-- Formatação CPF/CNPJ e Celular -->
+    <!-- Formatação CPF/CNPJ, Celular e CEP -->
     <script>
         function mascaraDinamica(input) {
             let v = input.value.replace(/\D/g, ''); 
@@ -79,6 +106,13 @@
             v = v.replace(/(\d{5})(\d)/, "$1-$2"); 
             input.value = v;
         }
+
+        function mascaraCEP(input) {
+            let v = input.value.replace(/\D/g, ""); // Remove tudo que não é número
+            v = v.replace(/^(\d{5})(\d)/, "$1-$2"); // Coloca o hífen após o quinto dígito
+            input.value = v;
+        }
+
     </script>
 </body>
 </html>
