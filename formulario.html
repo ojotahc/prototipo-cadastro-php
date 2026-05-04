@@ -10,28 +10,28 @@
     <div class="box">
         <form action="">
             <fieldset>
-                <legend>Cadastrar-se</legend>
+                <legend><b>Cadastre-se</b></legend>
 
-                <div class="inputbox">
+                <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome">Nome Completo</label>
                 </div>
                 <br><br>
-                <div class="inputbox">
+                <div class="inputBox">
                     <input type="text" name="documento" id="documento" class="inputUser" oninput="mascaraDinamica(this)" maxlength="18" inputmode="numeric" required>
                     <label for="documento">CPF ou CNPJ</label>
                 </div>
                 <br><br>
-                <div class="inputbox">
+                <div class="inputBox">
                     <input type="tel" name="celular" id="celular" class="inputUser" placeholder="(00) 00000-0000" maxlength="15" onkeyup="mascaraCelular(this)" required>
                     <label for="celular">Celular</label>
                 </div>
                 <br><br>
-                <div class="inputbox">
+                <div class="inputBox">
                     <input type="email" name="email" id="email" class="inputUser" required>
                     <label for="email">Email</label>
                 </div>
-                <br><br>
+                <br>
                 <div>
                     <p>Sexo:</p>
                     <input type="radio" id="feminino" name="genero" value="feminino" required>
@@ -42,39 +42,39 @@
                     <label for="outro">Outro</label>
                 </div>
                 <br><br>
-                <div class="inputbox">
-                    <label for="data_nascimento">Data de Nascimento</label>
-                    <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
-                </div>
+                <!--<div class="inputBox">-->
+                    <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                    <input type="date" name="data_nascimento" id="data_nascimento" required>
+
                 <br><br>
-                <div class="inputbox">
+                <div class="inputBox">
                     <input type="text" name="endereco" id="endereco" class="inputUser" required>
                     <label for="endereco">Endereço</label>
                 </div>
                 <br><br>
-                <div class="inputbox">
+                <div class="inputBox">
                 <input type="text" name="numero" id="numero" class="inputUser" inputmode="numeric" required>
                 <label for="numero">Número</label>
                 </div>
                 <br><br>
-                <div class="inputbox">
+                <div class="inputBox">
                     <input type="text" name="bairro" id="bairro" class="inputUser" required>
                     <label for="bairro">Bairro</label>
                 </div>
                 <br><br>
-                <div class="inputbox">
+                <div class="inputBox">
                     <input type="text" name="cep" id="cep" class="inputUser" 
                     oninput="mascaraCEP(this)" maxlength="9" inputmode="numeric" 
                     placeholder="00000-000" required>
                     <label for="cep">CEP</label>
                 </div>
                 <br><br>
-                <div class="inputbox">
+                <div class="inputBox">
                     <input type="text" name="cidade" id="cidade" class="inputUser" required>
                     <label for="cidade">Cidade</label>
                 </div>
                 <br><br>                
-                <div class="inputbox">
+                <div class="inputBox">
                     <input type="text" name="Estado" id="Estado" class="inputUser" required>
                     <label for="Estado">Estado</label>
                 </div>
