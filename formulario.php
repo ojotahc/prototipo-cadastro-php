@@ -18,9 +18,34 @@
         $cidade = $_POST['cidade'];
         $estado = $_POST['estado'];
 
-        $resut = ""; // aqui vou colocar o comando para inserir a query
+        $resut = pg_query($conexao, "INSERT INTO usuarios (
+            nome, 
+            cpf_cnpj, 
+            celular, 
+            email, 
+            genero, 
+            data_nascimento, 
+            endereco, 
+            numero, 
+            bairro, 
+            cep, 
+            cidade, 
+            estado
+        ) VALUES (
+            '$nome', 
+            '$cpf_cnpj', 
+            '$celular', 
+            '$email', 
+            '$genero', 
+            '$data_nascimento', 
+            '$endereco', 
+            '$numero', 
+            '$bairro', 
+            '$cep', 
+            '$cidade', 
+            '$estado'
+        )");
     }
-
 ?>
 
 <!DOCTYPE html>
