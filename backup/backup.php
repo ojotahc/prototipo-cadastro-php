@@ -2,6 +2,7 @@
 
     include_once('config.php');
 
+
     if(isset($_POST['submit']))
     {
         // print_r($_POST['nome']); se quiser testar
@@ -18,7 +19,7 @@
         $cidade = $_POST['cidade'];
         $estado = $_POST['estado'];
 
-        $resut = ""; // aqui vou colocar o comando para inserir a query
+        $resut = // aqui vou colocar o comando para inserir a query
     }
 
 ?>
@@ -67,8 +68,10 @@
                     <label for="outro">Outro</label>
                 </div>
                 <br><br>
-                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
-                <input type="date" name="data_nascimento" id="data_nascimento" required>
+                <!--<div class="inputBox">-->
+                    <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                    <input type="date" name="data_nascimento" id="data_nascimento" required>
+
                 <br><br>
                 <div class="inputBox">
                     <input type="text" name="endereco" id="endereco" class="inputUser" required>
@@ -76,8 +79,8 @@
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="numero" id="numero" class="inputUser" inputmode="numeric" required>
-                    <label for="numero">Número</label>
+                <input type="text" name="numero" id="numero" class="inputUser" inputmode="numeric" required>
+                <label for="numero">Número</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
@@ -86,7 +89,9 @@
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="cep" id="cep" class="inputUser" oninput="mascaraCEP(this)" maxlength="9" inputmode="numeric" placeholder="00000-000" required>
+                    <input type="text" name="cep" id="cep" class="inputUser" 
+                    oninput="mascaraCEP(this)" maxlength="9" inputmode="numeric" 
+                    placeholder="00000-000" required>
                     <label for="cep">CEP</label>
                 </div>
                 <br><br>
@@ -131,10 +136,11 @@
         }
 
         function mascaraCEP(input) {
-            let v = input.value.replace(/\D/g, ""); 
-            v = v.replace(/^(\d{5})(\d)/, "$1-$2"); 
+            let v = input.value.replace(/\D/g, ""); // Remove tudo que não é número
+            v = v.replace(/^(\d{5})(\d)/, "$1-$2"); // Coloca o hífen após o quinto dígito
             input.value = v;
         }
+
     </script>
 </body>
 </html>
