@@ -1,10 +1,10 @@
 <?php
 
-    $host = 'Localhost';
+    $host = 'localhost';
     $port = '5432';
-    $dbname = 'testeApp';
-    $user = 'usuario_do_banco';
-    $password = 'senha_do_banco';
+    $dbname = 'server101';
+    $user = 'postgres';
+    $password = '';
 
 
     $conexao = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
