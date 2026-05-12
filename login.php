@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de login</title>
-    <link rel="stylesheet" href="css/tela-login.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-
+    <a href="home.php">Voltar</a>
     <div>
         <h1>Login</h1>
-        <input type="text" placeholder="Usuário"> <!--placeholder é o que fica dentro do input-->
+        <form action="" method="POST">
+        <input type="text" name="email" placeholder="Email"> <!--placeholder é o que fica dentro do input-->
         <br><br>
         <input type="password" placeholder="Senha">
         <br><br>
-        <button>Entrar</button>
+        <input class="inputSubmit" type="submit" name="submit" value='Enviar'>
     </div>
 
 </body>

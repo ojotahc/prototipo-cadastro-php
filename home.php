@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,7 +12,7 @@
     <h1>Seja bem-vindo(a)</h1>
     <div class="box">
         <a href="login.php">Login</a>
-        <a href="fomulario.php">Cadastre-se</a>
+        <a href="formulario.php">Cadastre-se</a>
     </div>
 </body>
 </html>

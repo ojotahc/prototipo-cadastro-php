@@ -9,6 +9,7 @@
         $cpf_cnpj = $_POST['cpf_cnpj'];
         $celular = $_POST['celular'];
         $email = $_POST['email'];
+        $senha = $_POST['senha'];
         $genero = $_POST['genero'];
         $data_nascimento = $_POST['data_nascimento'];
         $endereco = $_POST['endereco'];
@@ -22,7 +23,8 @@
             nome, 
             cpf_cnpj, 
             celular, 
-            email, 
+            email,
+            senha, 
             genero, 
             data_nascimento, 
             endereco, 
@@ -35,7 +37,8 @@
             '$nome', 
             '$cpf_cnpj', 
             '$celular', 
-            '$email', 
+            '$email',
+            '$senha', 
             '$genero', 
             '$data_nascimento', 
             '$endereco', 
@@ -57,6 +60,7 @@
     <link rel="stylesheet" href="css/formulario.css">
 </head>
 <body>
+    <a href="home.php">Voltar</a>
     <div class="box">
         <form action="formulario.php" method="POST">
             <fieldset>
@@ -81,6 +85,11 @@
                     <input type="email" name="email" id="email" class="inputUser" required>
                     <label for="email">Email</label>
                 </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha">Senha</label>
+                </div
                 <br>
                 <div>
                     <p>Gênero:</p>
