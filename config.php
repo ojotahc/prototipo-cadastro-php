@@ -4,7 +4,7 @@
     $port = '5432';
     $dbname = 'server101';
     $user = 'postgres';
-    $password = 'snapadmin';
+    $password = '';
 
 
     $conexao = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
