@@ -13,9 +13,10 @@
         <form action="testLogin.php" method="POST">
         <input type="text" name="email" placeholder="Email"> <!--placeholder é o que fica dentro do input-->
         <br><br>
-        <input type="password" placeholder="Senha">
+        <input type="password" name="senha" placeholder="Senha">
         <br><br>
         <input class="inputSubmit" type="submit" name="submit" value='Enviar'>
+        </form>
     </div>
 
 </body>
