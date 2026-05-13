@@ -10,7 +10,7 @@
     <a href="home.php">Voltar</a>
     <div>
         <h1>Login</h1>
-        <form action="" method="POST">
+        <form action="testLogin.php" method="POST">
         <input type="text" name="email" placeholder="Email"> <!--placeholder é o que fica dentro do input-->
         <br><br>
         <input type="password" placeholder="Senha">
