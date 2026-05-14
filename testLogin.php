@@ -1,5 +1,7 @@
 <?php
 
+    session_start(); // usar sempre que for trabalhar com sessões
+
     // print_r($_REQUEST);
 
     if(isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['senha'])) // se exitir
@@ -21,16 +23,18 @@
 
         if(pg_num_rows($result) < 1)
         {
-
+            unset($_SESSION['email']);
+            unset($_SESSION['senha']);
             header('Location: login.php');
             // print_r('Não existe');
         }
         else
         {
             // print_r('Existe');
+            $_SESSION['email'] = $email;
+            $_SESSION['senha'] = $senha;
             header('Location: menu.php');
         }
-
 
         
     }
